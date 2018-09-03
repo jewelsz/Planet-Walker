@@ -5,6 +5,7 @@ using UnityEngine;
 public class GravityBody : MonoBehaviour
 {
     private GravityAttractor attractor;
+
     private Transform myTransform;
     public Rigidbody rb;
     MoveTowardsHook moveTowardshook;
@@ -34,10 +35,13 @@ public class GravityBody : MonoBehaviour
     public void disableGravity()
     {
         disable = true;
+        attractor.disabled = true;
     }
 
-    public void enableGravity()
+    public void enableGravity(GravityAttractor attractor)
     {
+        this.attractor = attractor;
         disable = false;
+        attractor.disabled = false;
     }
 }

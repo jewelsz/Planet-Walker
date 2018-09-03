@@ -306,13 +306,13 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\PlayerCollision.cs" />
     <Compile Include="Assets\Scripts\Camera\MouseLook.cs" />
     <Compile Include="Assets\Scripts\Camera\SwitchCamera.cs" />
     <Compile Include="Assets\Scripts\Camera\ZoomScript.cs" />
     <Compile Include="Assets\Scripts\Gadgets\Grapple Hook\HookScript.cs" />
     <Compile Include="Assets\Scripts\Gravity\GravityAttractor.cs" />
     <Compile Include="Assets\Scripts\Gravity\GravityBody.cs" />
+    <Compile Include="Assets\Scripts\Player Scripts\Collision\PlayerCollision.cs" />
     <Compile Include="Assets\Scripts\Player Scripts\Grapple Hook\HookCollision.cs" />
     <Compile Include="Assets\Scripts\Player Scripts\Grapple Hook\HookShootScript.cs" />
     <Compile Include="Assets\Scripts\Player Scripts\Movement\MoveTowardsHook.cs" />

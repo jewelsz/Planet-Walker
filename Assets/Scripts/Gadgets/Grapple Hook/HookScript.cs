@@ -5,6 +5,8 @@ using UnityEngine;
 public class HookScript : MonoBehaviour
 {
     Rigidbody m_Rigidbody;
+    [SerializeField]
+    PlayerCollision playerCollision;
 
     public bool thisDestroy;
     
@@ -20,6 +22,7 @@ public class HookScript : MonoBehaviour
         {
             thisDestroy = false;
             setPosition();
+            playerCollision.attractor = collision.gameObject.GetComponent<GravityAttractor>();
         }
     }
 

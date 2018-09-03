@@ -12,7 +12,7 @@ public class MoveTowardsHook : MonoBehaviour
     GravityBody gravity;
 
 
-    private bool activateMove;
+    public bool activateMove;
 
     float speed;
 
@@ -41,12 +41,6 @@ public class MoveTowardsHook : MonoBehaviour
     public void moveTowardsHook()
     {
         activateMove = true;
-    }
-
-    public void stopMovement()
-    {
-        activateMove = false;
-        transform.position = transform.position;
     }
 
     public void setHook(GameObject hook)
