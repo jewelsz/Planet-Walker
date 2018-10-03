@@ -132,12 +132,28 @@ MonoBehaviour:
   moveTowardsHook: {fileID: 307545508}
   playermovement: {fileID: 307545512}
   hookShoot: {fileID: 307545510}
+  gravity: {fileID: 307545511}
+  attractor: {fileID: 0}
 --- !u!114 &307545508 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 114170602172087330, guid: c6990c7a904a04a43a55d7c21325de45,
     type: 2}
   m_PrefabInternal: {fileID: 826644819}
   m_Script: {fileID: 11500000, guid: aecd0c4773131a44496568a850c21cbc, type: 3}
+--- !u!114 &307545509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 307545506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ef52f1852ed453498cc70470cb47d74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerCollision: {fileID: 307545507}
+  gbd: {fileID: 307545511}
+  thisDestroy: 0
 --- !u!114 &307545510 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 114997585529530248, guid: c6990c7a904a04a43a55d7c21325de45,
@@ -334,6 +350,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gravity: -10
+  disabled: 0
 --- !u!1 &1009361102
 GameObject:
   m_ObjectHideFlags: 0
@@ -523,6 +540,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gravity: -10
+  disabled: 0
 --- !u!23 &1394890257
 MeshRenderer:
   m_ObjectHideFlags: 0

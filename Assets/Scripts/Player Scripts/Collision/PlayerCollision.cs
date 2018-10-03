@@ -15,6 +15,7 @@ public class PlayerCollision : MonoBehaviour
 
     public GravityAttractor attractor;
 
+
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Grapple Hook"))

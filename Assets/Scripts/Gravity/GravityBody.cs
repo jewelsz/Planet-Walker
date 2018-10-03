@@ -4,19 +4,17 @@ using UnityEngine;
 
 public class GravityBody : MonoBehaviour
 {
-    private GravityAttractor attractor;
+    public GravityAttractor attractor;
 
     private Transform myTransform;
     public Rigidbody rb;
     MoveTowardsHook moveTowardshook;
-    bool disable;
 
     void Start()
     {
         rb.constraints = RigidbodyConstraints.FreezeRotation;
         rb.useGravity = false;
         myTransform = transform;
-        disable = false;
     }
 
     void Update()
@@ -28,20 +26,19 @@ public class GravityBody : MonoBehaviour
     {
         if (collision.gameObject.tag == "Planet")
         {
+            Debug.Log("touched planet");
             attractor = collision.gameObject.GetComponent<GravityAttractor>();
         }
     }
 
     public void disableGravity()
     {
-        disable = true;
         attractor.disabled = true;
     }
 
-    public void enableGravity(GravityAttractor attractor)
+    public void enableGravity(GravityAttractor attractorObj)
     {
-        this.attractor = attractor;
-        disable = false;
+        Debug.Log("gravityBody script object inhoud: " + attractor.gameObject.tag);
         attractor.disabled = false;
     }
 }
